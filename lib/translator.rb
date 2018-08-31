@@ -22,10 +22,10 @@ def get_japanese_emoticon(path, emoticon)
   ha_sh = load_library(path)
   ha_sh['get_emoticon'].each do |key, val| 
     if emoticon ==  key
-      return v
+      return val
     end
-  return "Sorry, that emoticon was not found"
   end
+  return "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning
