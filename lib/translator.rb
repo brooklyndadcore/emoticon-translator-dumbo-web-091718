@@ -18,8 +18,9 @@ def load_library(emoticon_path)
   return yammed_hash
 end
 
-def get_japanese_emoticon(path = YAML.load_file('./lib/emoticons.yml'), emoticon)
-  # code goes here
+def get_japanese_emoticon(path, emoticon)
+  ha_sh = load_library(path)
+  return ha_sh['get_emoticon'][emoticon]
 end
 
 def get_english_meaning
