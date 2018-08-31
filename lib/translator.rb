@@ -32,7 +32,7 @@ def get_english_meaning(path, emoticon)
   ha_sh = load_library(path)
   ha_sh['get_emoticon'].each do |key, val| 
     if emoticon ==  val
-      return key
+      return ha_sh['get_meaning'][emoticon]
     end
   end
   return "Sorry, that emoticon was not found"
