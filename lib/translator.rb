@@ -20,7 +20,11 @@ end
 
 def get_japanese_emoticon(path, emoticon)
   ha_sh = load_library(path)
-  return ha_sh['get_emoticon'][emoticon]
+  if [emoticon] ==  ha_sh['get_emoticon'].keys
+    return ha_sh['get_emoticon'][emoticon]
+  else
+    return "Sorry, that emoticon was not found"
+  end
 end
 
 def get_english_meaning
